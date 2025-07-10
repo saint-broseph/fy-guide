@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1 class="text-3xl font-bold mb-4">📊 Grade vs Marks Reference</h1>
+  <p class="mb-6 text-lg">Approximate conversion of marks into grades — varies slightly each year, but these are close estimates.</p>
+
+  <table class="table-auto w-full border border-gray-300 text-left text-sm">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="border border-gray-300 p-2">Course</th>
+        <th class="border border-gray-300 p-2">A</th>
+        <th class="border border-gray-300 p-2">B</th>
+        <th class="border border-gray-300 p-2">C</th>
+        <th class="border border-gray-300 p-2">D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-300 p-2">Mathematics 1</td>
+        <td class="border border-gray-300 p-2">>80</td>
+        <td class="border border-gray-300 p-2">70–79</td>
+        <td class="border border-gray-300 p-2">55–69</td>
+        <td class="border border-gray-300 p-2">40–54</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2">C Programming</td>
+        <td class="border border-gray-300 p-2">>85</td>
+        <td class="border border-gray-300 p-2">75–84</td>
+        <td class="border border-gray-300 p-2">60–74</td>
+        <td class="border border-gray-300 p-2">45–59</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-300 p-2">Physics Lab</td>
+        <td class="border border-gray-300 p-2">>90</td>
+        <td class="border border-gray-300 p-2">80–89</td>
+        <td class="border border-gray-300 p-2">70–79</td>
+        <td class="border border-gray-300 p-2">55–69</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="text-xs text-gray-600 mt-4">📌 Note: These are senior-contributed estimates. Actual cutoffs vary by batch and instructor.</p>
+</BaseLayout>

@@ -1,0 +1,40 @@
+<nav class="w-full bg-gray-100 dark:bg-gray-800 py-4 shadow-md mb-6">
+  <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between">
+    <a href="/" class="text-xl font-bold text-blue-600 dark:text-white">📘 FY Guide</a>
+    <div class="flex flex-wrap gap-4 items-center text-sm md:text-base">
+      <a href="/courses/mathematics-1" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Courses</a>
+      <a href="/resources" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Resources</a>
+      <a href="/advice" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Advice</a>
+      <a href="/help" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Help</a>
+      <a href="/planner" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Planner</a>
+      <a href="/mental-health" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Mental Health</a>
+      <a href="/campus-guide" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Campus</a>
+      <a href="/grade-vs-marks" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Grades</a>
+      <a href="/team" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">Team</a>
+
+      <!-- 🌙/☀️ Toggle -->
+      <button id="toggleDarkMode" class="ml-2 px-3 py-1 bg-gray-300 dark:bg-gray-600 text-black dark:text-white rounded">
+        🌙
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("toggleDarkMode");
+      const root = document.documentElement;
+
+      function updateIcon() {
+        btn.textContent = root.classList.contains("dark") ? "☀️" : "🌙";
+      }
+
+      btn.addEventListener("click", () => {
+        root.classList.toggle("dark");
+        localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+        updateIcon();
+      });
+
+      updateIcon();
+    });
+  </script>
+</nav>
